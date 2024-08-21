@@ -7,14 +7,14 @@ const Home = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get('http://localhost:5000/api/users');
+      const res = await axios.get('https://geeksynergytechnologiespvtltd-backend.onrender.com/api/users');
       setUsers(res.data);
     };
     fetchUsers();
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/delete/${id}`);
+    await axios.delete(`https://geeksynergytechnologiespvtltd-backend.onrender.com/api/delete/${id}`);
     setUsers(users.filter(user => user._id !== id));
   };
 

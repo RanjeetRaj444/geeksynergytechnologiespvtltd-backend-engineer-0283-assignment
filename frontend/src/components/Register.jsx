@@ -19,7 +19,7 @@ const Register = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("http://localhost:5000/api/register", user);
+			const res = await axios.post("https://geeksynergytechnologiespvtltd-backend.onrender.com/api/register", user);
 			setMessage(res.data.message);
 		} catch (error) {
 			setMessage("Error: " + error.response.data.message);
